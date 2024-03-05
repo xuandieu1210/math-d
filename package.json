@@ -1,0 +1,64 @@
+{
+  "name": "math-d",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Versatile JavaScript library for precise rounding of decimal places and significant digits.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepack": "npm run build",
+    "build": "npm run clean && npm run build:tsc && npm run build:js",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuandieu1210/math-d.git"
+  },
+  "keywords": [
+    "Math",
+    "util",
+    "round",
+    "ceil",
+    "floor",
+    "Math.round",
+    "Math.ceil",
+    "Math.floor"
+  ],
+  "author": "1eecan (https://github.com/1eecan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuandieu1210/math-d.git/issues"
+  },
+  "homepage": "https://github.com/xuandieu1210/math-d.git#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@types/node": "^20.11.8",
+    "babel-jest": "^29.7.0",
+    "esbuild": "^0.20.0",
+    "jest": "^29.7.0",
+    "deotheme": "^5.3.3",
+    "typescript": "^1.0.0",
+    "deo-vector-math": "^1.0.0",
+    "bigfactoriald": "^1.0.0",
+    "vectord": "^1.0.1"
+  },
+  "jest": {
+    "transfbigfactorialdorm": {
+      "\\.js$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
